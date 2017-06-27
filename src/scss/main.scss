@@ -1,0 +1,25 @@
+
+$amarillo: rgb(247,182,23);
+$gris: rgb(43,43,43);
+
+
+
+.navegador{
+	background: $amarillo;
+ }
+
+.menu{
+	background: $gris;
+}
+/*
+esta funcion llamada gris pasa como parametros el numero de cols que queremos sacar y el numero total de cols utilizadas, regresa el porcentaje obtenidp entre la división de num y cols*/
+@function grid($num, $cols:12){
+	@return percentage($num / $cols);
+}
+/*
+se realiza la iteración de la funcion anterior para crear los siguientes porcentajes a utilizar*/
+@for $i from 1 through 12{
+	.col-#{$i}{
+		width: grid($i);
+	}
+}
