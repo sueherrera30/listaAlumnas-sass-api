@@ -1,25 +1,58 @@
-
-$amarillo: rgb(247,182,23);
-$gris: rgb(43,43,43);
-
-
+@import 'resolutions';
+@import 'colors';
+@import 'fonts';
 
 .navegador{
 	background: $amarillo;
+	text-align: $centrar;
+	font-family: $fuente;
+	font-size: $tamanoGrande;
+	color: $blanco;
+	
  }
 
 .menu{
-	background: $gris;
-}
-/*
-esta funcion llamada gris pasa como parametros el numero de cols que queremos sacar y el numero total de cols utilizadas, regresa el porcentaje obtenidp entre la división de num y cols*/
-@function grid($num, $cols:12){
-	@return percentage($num / $cols);
-}
-/*
-se realiza la iteración de la funcion anterior para crear los siguientes porcentajes a utilizar*/
-@for $i from 1 through 12{
-	.col-#{$i}{
-		width: grid($i);
+	
+	ul{
+		li{
+			background: $gris;
+			color: $blanco;
+			margin-top: $marginTop;
+			font-size: $tamanoMediano;
+			padding: $paddingMenu;
+			font-family: $fuente;	
+
+			
+
+		}
 	}
 }
+
+
+.alumnas{
+  font-family: $fuente;
+  font-size: $tamanoMediano;
+ 
+}
+
+.aside{
+
+		div{
+			background: $gris;
+			color: $blanco;
+			font-size: $tamanoMediano;
+			padding: $paddingAside;
+			font-family: $fuente;
+			text-align: $centrar;
+	}
+}
+
+.pie{
+	p{
+	background: $amarillo;
+	font-family: $fuente;
+	font-size: $tamanoGrande;
+	text-align: $izquerda;
+	}
+	
+ }

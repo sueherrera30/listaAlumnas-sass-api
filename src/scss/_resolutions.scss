@@ -1,0 +1,43 @@
+
+$container: 100%;
+$paddingCero: 0;
+$marginCero: 0 auto;
+$marginTop: 2%;
+$paddingMenu: 3%;
+$paddingAside: 10%;
+*{
+	padding:  $paddingCero;
+	margin: $marginCero;
+	box-sizing: border-box;
+}
+
+@function grid($num, $cols:12){
+	@return percentage($num / $cols);
+}
+
+@for $i from 1 through 12{
+	.col-#{$i}{
+		width: grid($i);
+ }
+	
+}
+.container{
+	width: $container;
+	margin: $marginCero;
+	max-width: 1200px;
+}
+
+.row::before, .row::after {
+  content: " ";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
+
+[class*="col-"] {
+  min-height: 8px;
+  padding: 12px;
+  float: left;
+}

@@ -1,14 +1,8 @@
-@charset "UTF-8";
-.navegador {
-  background: #f7b617; }
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box; }
 
-.menu {
-  background: #2b2b2b; }
-
-/*
-esta funcion llamada gris pasa como parametros el numero de cols que queremos sacar y el numero total de cols utilizadas, regresa el porcentaje obtenidp entre la divisi├│n de num y cols*/
-/*
-se realiza la iteraci├│n de la funcion anterior para crear los siguientes porcentajes a utilizar*/
 .col-1 {
   width: 8.33333%; }
 
@@ -44,5 +38,55 @@ se realiza la iteraci├│n de la funcion anterior para crear los siguientes po
 
 .col-12 {
   width: 100%; }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.row::before, .row::after {
+  content: " ";
+  display: table; }
+
+.row::after {
+  clear: both; }
+
+[class*="col-"] {
+  min-height: 8px;
+  padding: 12px;
+  float: left; }
+
+.navegador {
+  background: #f7b617;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2vw;
+  color: white; }
+
+.menu ul li {
+  background: #2b2b2b;
+  color: white;
+  margin-top: 2%;
+  font-size: 1vw;
+  padding: 3%;
+  font-family: sans-serif; }
+
+.alumnas {
+  font-family: sans-serif;
+  font-size: 1vw; }
+
+.aside div {
+  background: #2b2b2b;
+  color: white;
+  font-size: 1vw;
+  padding: 10%;
+  font-family: sans-serif;
+  text-align: center; }
+
+.pie p {
+  background: #f7b617;
+  font-family: sans-serif;
+  font-size: 1.2vw;
+  text-align: left; }
 
 /*# sourceMappingURL=main.css.map */
