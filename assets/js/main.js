@@ -1,3 +1,4 @@
+var api = 'http://laboratoria.cuadra.co:9339/api/v1/students/';
 
 var cargarPagina = function () {
  cargarLista();
@@ -5,29 +6,38 @@ var cargarPagina = function () {
 
 
 var cargarLista = function (){
-	var api = 'http://laboratoria.cuadra.co:9339/api/v1/students/';
-
-$.getJSON(api, function (response) {
-    var alumna = response;
-	crearAlumnaNueva (alumna);
+	
+$.getJSON(api, function (alumnas) {
+	alumnas.forEach(crearAlumnaNueva);
   });
  };
 
 
-var crearAlumnaNueva = function (alumnas) {	
+var crearAlumnaNueva = function (alumna) {	
+   
+	    console.log(alumna);
+	var apellidoMaterno = alumna.mLastName;
+	  console.log(apellidoMaterno);
+	var apellidoPaterno =alumna.pLastName;
+	var alumna = alumna.name;
+	
+	
+	
+	
+	    console.log(apellidoMaterno);
+	
 var $ol = $("<ol/>");
 var $almacenAlumnas = $("#almacenAlumnas");
-	
-alumnas.forEach( function (alumna){
-/*creamos*/
-var $li = ("<li/>");
-var $palomita = ("<input/>");
+var $palomita = $("<input/>");
 	$palomita.attr("type", "checkbox");
-	$li.text(alumna.name);
+	var $li = $("<li/>");
+	
+	$li.text(alumna + " "+ apellidoMaterno + " " + apellidoPaterno );
 	$li.append($palomita);
 	$ol.append($li);
-	});
-$almacenAlumnas.append($ol);
-}
+	$almacenAlumnas.append($ol);
+	};
+
+
 
 $(document).ready(cargarPagina);
