@@ -26,7 +26,7 @@ var crearAlumnaNueva = function (alumna) {
 	
 	    console.log(apellidoMaterno);
 	
-var $ol = $("<ol/>");
+var $ul = $("<ul/>");
 var $almacenAlumnas = $("#almacenAlumnas");
 var $palomita = $("<input/>");
 	$palomita.attr("type", "checkbox");
@@ -34,8 +34,8 @@ var $palomita = $("<input/>");
 	
 	$li.text(alumna + " "+ apellidoMaterno + " " + apellidoPaterno );
 	$li.append($palomita);
-	$ol.append($li);
-	$almacenAlumnas.append($ol);
+	$ul.append($li);
+	$almacenAlumnas.append($ul);
 	};
 
 

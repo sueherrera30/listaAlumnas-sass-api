@@ -7,22 +7,63 @@ $marginCero: 0 auto;
 $marginTop: 2%;
 $paddingMenu: 3%;
 $paddingAside: 10%;
+$paddingPie: 2%;
 *{
 	padding:  $paddingCero;
 	margin: $marginCero;
 	box-sizing: border-box;
 }
 
+@media screen and (max-width: 480px) {
+    
 @function grid($num, $cols:12){
 	@return percentage($num / $cols);
 }
 
 @for $i from 1 through 12{
-	.col-#{$i}{
+	.small-#{$i}{
 		width: grid($i);
  }
 	
+	
 }
+	
+}
+
+@media screen and (min-width: 780px) {
+    
+@function grid($num, $cols:12){
+	@return percentage($num / $cols);
+}
+
+@for $i from 1 through 12{
+	.medium-#{$i}{
+		width: grid($i);
+ }
+	
+	
+}
+	
+}
+
+@media screen and (min-width: 1200px) {
+    
+@function grid($num, $cols:12){
+	@return percentage($num / $cols);
+}
+
+@for $i from 1 through 12{
+	.large-#{$i}{
+		width: grid($i);
+ }
+	
+	
+}
+	
+}
+
+
+
 .container{
 	width: $container;
 	margin: $marginCero;
