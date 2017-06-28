@@ -9,11 +9,29 @@
 	font-size: $tamanoGrande;
 	color: $blanco;
 	
+	
+	@media (min-width: $gridMobile) {
+		@include grid (12);
+	}
+	@media (min-width: $gridMedio ) {
+		@include grid (12)
+	}
+	@media (min-width: $gridEscritorio) {
+		@include grid (12)
  }
 
 .menu{
-	
-	ul{
+	 
+	@media (min-width: $gridMobile) {
+		@include grid (12);
+	}
+	@media (min-width: $gridMedio ) {
+		@include grid (4)
+	}
+	@media (min-width: $gridEscritorio) {
+		@include grid (3)
+
+			ul{
 		li{
 			background: $gris;
 			color: $blanco;
@@ -21,8 +39,6 @@
 			font-size: $tamanoMediano;
 			padding: $paddingMenu;
 			font-family: $fuente;	
-
-			
 
 		}
 	}
@@ -32,11 +48,31 @@
 .alumnas{
   font-family: $fuente;
   font-size: $tamanoMediano;
- 
+   
+	
+	@media (min-width: $gridMobile) {
+		@include grid (12);
+	}
+	@media (min-width: $gridMedio ) {
+		@include grid (8)
+	}
+	@media (min-width: $gridEscritorio) {
+		@include grid (6)
 }
 
 .aside{
-
+  
+	
+	@media (min-width: $gridMobile) {
+		@include grid (12);
+	}
+	@media (min-width: $gridMedio ) {
+		@include grid (12)
+	}
+	@media (min-width: $gridEscritorio) {
+		@include grid (3)
+		
+			
 		div{
 			background: $gris;
 			color: $blanco;
@@ -49,10 +85,21 @@
 
 .pie{
 	p{
-	background: $amarillo;
+	background: $gris;
+	color: $blanco;
 	font-family: $fuente;
-	font-size: $tamanoGrande;
-	text-align: $izquerda;
+	font-size: $tamanoMediano;
+	text-align: $centrar;
 	}
 	
+	
+	
+	@media (min-width: $gridMobile) {
+		@include grid (12);
+	}
+	@media (min-width: $gridMedio ) {
+		@include grid (12)
+	}
+	@media (min-width: $gridEscritorio) {
+		@include grid (12)
  }
